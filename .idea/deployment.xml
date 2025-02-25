@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="2_8卡" autoUploadExternalChanges="true" showDifferentInSync="false" showNewOnTargetInSync="false">
+    <serverData>
+      <paths name="2_8卡">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/remote" local="$PROJECT_DIR$/.." web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="3090卡">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/remote" local="$PROJECT_DIR$/.." web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="旧8卡">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/remote" local="$PROJECT_DIR$/.." web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/reference/Lite-HRNet" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/reference/lite_hrnet" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/reference/mmpose" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/reference/pyskl" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/reference/simdr" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/reference/stgcn" vcs="Git" />
+  </component>
+</project>
