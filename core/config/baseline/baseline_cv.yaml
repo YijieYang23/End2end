@@ -1,4 +1,4 @@
-NAME: 'sgd_cycle5'
+NAME: 'baseline_cv'
 BACKBONE: 'lite-hrnet'
 AUTO_RESUME: true
 CUDNN:
@@ -14,7 +14,7 @@ LOG_DIR: 'log'
 
 # must do settings
 BATCH_PER_GPU: 6
-WORKERS: 12
+WORKERS: 8
 PURE_VALID: false
 VALID_FREQ: 1
 PRINT_FREQ: 100
@@ -49,11 +49,11 @@ MODEL:
   INPUT_SIZE_MUST_CHOOSE_FROM: [32, 64, 96, 128, 160, 192, 224, 256, 288, 320, 352]
 # w h
   IMAGE_SIZE:
-  - 128
-  - 128
+  - 96
+  - 160
   HEATMAP_SIZE:
-  - 128
-  - 128
+  - 96
+  - 160
   SIGMA: 4
   EXTRA:
     FINAL_CONV_KERNEL: 1
@@ -82,23 +82,13 @@ TRAIN:
   EVAL_MODE: 'cv'
 # must do settings
   BEGIN_EPOCH: 0
-  END_EPOCH: 50
+  END_EPOCH: 100
 opt1:
-  type: 'sgd'
-  POLICY: 'OneCycleLR'
-  LR: 0.0002 # 2e-4
-  max_lr: 0.005 # 5e-3
-  min_lr: 0.00002 # 2e-5
-  pct_start: 0.3
-  three_phase: true
-opt2:
-  type: 'sgd'
-  POLICY: 'OneCycleLR'
-  LR: 0.0002 # 2e-4
-  max_lr: 0.005 # 5e-3
-  min_lr: 0.00002 # 2e-5
-  pct_start: 0.3
-  three_phase: true
+  type: 'adam'
+  LR: 0.002
+  POLICY: 'MultiStepLR'
+  LR_STEP: [30,50,70,90]
+  LR_FACTOR: 0.5
 DEBUG:
   DEBUG: true
 # must do settings
